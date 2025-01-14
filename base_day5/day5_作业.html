@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function pro1() {
+      let arr = ["老赵", "老李", "小传", "小黑"]
+      let random = Math.floor(Math.random() * arr.length)
+      console.log(arr[random])
+      arr.splice(random, 1)
+      console.log(arr)
+    }
+    function pro2() {
+      let per = {
+        gender: '男',
+        age: 18,
+        hobby: '打篮球',
+        speak: function () {
+          console.log("hello")
+        },
+        eat: function () {
+          console.log("吃饭")
+        }
+      }
+      console.log(per.age)
+      per.speak()
+      per.eat()
+    }
+    function pro4() {
+      let num = Math.floor(Math.random() * 101)
+      let flag = false
+      for (let i = 1; i <= 8; i++) {
+        let guess = Number(prompt('请输入你猜的数字'))
+        if (guess > num) {
+          alert('猜大了')
+        } else if (guess < num) {
+          alert('猜小了')
+        } else {
+          alert('恭喜你猜对了')
+          flag = true
+          break
+        }
+      }
+      if (flag === false) {
+        alert('很遗憾，你没有猜对')
+      }
+    }
+
+    pro1()
+    pro2()
+    pro4()
+  </script>
+</body>
+
+</html>

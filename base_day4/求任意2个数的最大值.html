@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function getSum(x = 0, y = 0) {
+      if (x > y)
+        return x
+      else
+        return y
+    }
+    function getMaxArr(arr = []) {
+      let max = arr[0]
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+          max = arr[i]
+        }
+      }
+      return max
+    }
+    // let x = Number(prompt('请输入第一个数'))
+    // let y = Number(prompt('请输入第二个数'))
+    // let num = getSum(x, y)
+    // document.write(`两个数中的最大值是${num}`)
+    document.write('<br>' + '=====================' + '<br>')
+    let max = getMaxArr([100, 200, 300, 400, 500])
+    document.write(`数组中的最大值是${max}`)
+
+  </script>
+
+</body>
+
+</html>

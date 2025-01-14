@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+
+    function fn() {
+      const date = new Date()
+      const year = date.getFullYear()
+      let month = date.getMonth() + 1
+      month = month < 10 ? '0' + month : month
+      let day = date.getDate()
+      day = day < 10 ? '0' + day : day
+      let hour = date.getHours()
+      hour = hour < 10 ? '0' + hour : hour
+      let min = date.getMinutes()
+      min = min < 10 ? '0' + min : min
+      let sec = date.getSeconds()
+      sec = sec < 10 ? '0' + sec : sec
+
+      document.write(`${year}-${month}-${day} ${hour}:${min}:${sec}`)
+    }
+
+    fn()
+
+  </script>
+</body>
+
+</html>

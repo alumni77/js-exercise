@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function getRand(N = 0, M = 0) {
+      return Math.floor(Math.random() * (M - N + 1)) + N
+    }
+    let random = getRand(1, 10)
+    let num = Number(prompt('请输入一个1-10的数字'))
+    while (true) {
+      if (num === random) {
+        alert('恭喜你猜对了')
+        break
+      } else if (num > random) {
+        num = Number(prompt('猜大了，请重新输入'))
+      } else {
+        num = Number(prompt('猜小了，请重新输入'))
+      }
+    }
+
+  </script>
+</body>
+
+</html>

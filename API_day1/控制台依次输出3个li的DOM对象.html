@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul class="nav">
+    <li>首页</li>
+    <li>新闻</li>
+    <li>关于</li>
+  </ul>
+  <script>
+    const nav = document.querySelector('.nav')
+    // const lis1 = nav.querySelectorAll('li')
+    const lis = document.querySelectorAll('.nav li')
+    for (let i = 0; i < lis.length; i++) {
+      console.log(lis[i].innerText);
+
+    }
+
+  </script>
+</body>
+
+</html>

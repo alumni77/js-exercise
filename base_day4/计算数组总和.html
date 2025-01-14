@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function getTotalScore(arr = []) {
+      let sum = 0
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+      }
+      document.write(`总分是${sum}`)
+    }
+    getTotalScore([100, 200, 300, 400, 500])
+    document.write('<br>' + '=====================' + '<br>')
+    getTotalScore()
+  </script>
+
+</body>
+
+</html>

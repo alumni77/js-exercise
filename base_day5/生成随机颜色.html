@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function getRand(N = 0, M = 0) {
+      return Math.floor(Math.random() * (M - N + 1)) + N
+    }
+    function getRandColor(flag) {
+      if (flag == true) {
+        let num = getRand(0, 16777215)
+        return `#${num.toString(16)}`
+      } else {
+        return `rgb(${getRand(0, 255)},${getRand(0, 255)},${getRand(0, 255)})`
+      }
+    }
+    let color = getRandColor(true)
+    document.write(color + '<br>')
+    let color2 = getRandColor(false)
+    document.write(color2)
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function sum(x = 0, y = 0) {
+      return x + y
+    }
+
+    function changeNum(x = 0, y = 0) {
+      return [y, x]
+    }
+    function pro4() {
+      let save = Number(prompt('请输入存款金额'))
+      let con1 = Number(prompt('请输入当月食宿消费金额'))
+      let con2 = Number(prompt('请输入当月生活消费金额'))
+      return save - con1 - con2
+    }
+    function handleData(arr = [], flag) {
+      let sum = 0
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+      }
+      if (flag === false) {
+        return sum / arr.length
+      } else {
+        return sum
+      }
+    }
+    function some(ele, arr = []) {
+      let flag = false
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === ele) {
+          flag = true
+          break
+        }
+      }
+      return flag
+    }
+    function findIndex(ele, arr = []) {
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === ele) {
+          return i
+        }
+      }
+      return -1
+    }
+
+
+    let x = Number(prompt('请输入第一个数字'))
+    let y = Number(prompt('请输入第二个数字'))
+    let result = sum(x, y)
+    document.write(`${x}+${y}=${result}`)
+    document.write('<br>' + '=====================' + '<br>')
+    let arr = changeNum(x, y)
+    document.write(`交换前的数字为${x}和${y}` + '<br>')
+    document.write(`交换后的数字为${arr[0]}和${arr[1]}`)
+    document.write('<br>' + '=====================' + '<br>')
+    let save = pro4()
+    document.write(`当月结余为${save}`)
+    document.write('<br>' + '=====================' + '<br>')
+    let arr1 = [1, 2, 3, 4, 5]
+    let avg = handleData(arr1, false)
+    let sum1 = handleData(arr1, true)
+    document.write(`平均值为${avg}` + '<br>')
+    document.write(`总和为${sum1}`)
+    document.write('<br>' + '=====================' + '<br>')
+    let re = some('荔枝', ['苹果', '香蕉', '橘子', '荔枝', '梨子'])
+    document.write(re + '<br>')
+    let re1 = some('榴莲', ['苹果', '香蕉', '橘子', '荔枝', '梨子'])
+    document.write(re1)
+    document.write('<br>' + '=====================' + '<br>')
+    let index1 = findIndex(10, [1, 5, 10, 22, 8, 7])
+    document.write(index1 + '<br>')// 2
+    let index2 = findIndex(8, [1, 5, 10, 22, 8, 7])
+    document.write(index2 + '<br>')// 4
+    let index3 = findIndex(88, [1, 5, 10, 22, 8, 7])
+    document.write(index3 + '<br>')// -1
+
+  </script>
+</body>
+
+</html>

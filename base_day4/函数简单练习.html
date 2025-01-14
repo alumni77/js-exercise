@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    span {
+      display: inline-block;
+      width: 100px;
+      text-align: center;
+      padding: 5px 10px;
+      border: 2px solid pink;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    function sayHi() {
+      document.write('hi~')
+    }
+    function sheet99() {
+      for (let i = 1; i <= 9; i++) {
+        for (let j = 1; j <= i; j++) {
+          document.write(`<span>${j}✖️${i} = ${i * j}</span>`)
+          document.write('&nbsp;&nbsp;&nbsp;&nbsp;')
+        }
+        document.write('<br>')
+      }
+    }
+    function getSum() {
+      let num1 = Number(prompt('请输入第一个数字'))
+      let num2 = Number(prompt('请输入第二个数字'))
+      let sum = num1 + num2
+      document.write(`两个数字的和是${sum}`)
+    }
+    function getAllsum() {
+      let sum = 0
+      for (let i = 1; i <= 100; i++)
+
+        sum += i
+      document.write(`1-100的和是${sum}`)
+    }
+    function getAB(num1, num2) {
+      let sum = num1 + num2
+      document.write(`两个数字的和是${sum}`)
+    }
+
+    sayHi()
+    document.write('<br>' + '=====================' + '<br>')
+    /* for (let i = 1; i <= 3; i++) {
+      sheet99()
+      document.write('<br>' + '=====================' + '<br>')
+    } */
+    getAllsum()
+    document.write('<br>' + '=====================' + '<br>')
+    let num1 = Number(prompt('请输入第一个数字'))
+    let num2 = Number(prompt('请输入第二个数字'))
+    getAB(num1, num2)
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let i = 0
+    while (i <= 20) {
+      document.write(i + "<br>")
+      i++
+    }
+    document.write('<br>' + '=====================' + '<br>')
+    i = 1
+    let sum = 0;
+    while (i <= 1000) {
+      sum += i
+      i++
+    }
+    document.write(sum)
+    document.write('<br>' + '=====================' + '<br>')
+    i = 100
+    while (i <= 200) {
+      if (i % 6 === 0) {
+        document.write(i + "<br>")
+      }
+      i++
+    }
+    document.write('<br>' + '=====================' + '<br>')
+    let num1 = Number(prompt("请输入第一个数字"))
+    let num2 = Number(prompt("请输入第二个数字"))
+    document.write(num1 > num2 ? num1 : num2)
+    document.write('<br>' + '=====================' + '<br>')
+    let num = Number(prompt("请输入一个数字"))
+    i = 1, sum = 0
+    while (i <= num) {
+      sum += i
+      i++
+    }
+    document.write('<br>' + '=====================' + '<br>')
+    let score = Number(prompt("请输入一个分数"))
+    if (score >= 90) {
+      document.write("A")
+    } else if (score >= 80) {
+      document.write("B")
+    } else if (score >= 70) {
+      document.write("C")
+    } else if (score >= 60) {
+      document.write("D")
+    } else {
+      document.write("E")
+    }
+    document.write('<br>' + '=====================' + '<br>')
+    let str = prompt("请输入一个星期数")
+    switch (str) {
+      case '星期一':
+        document.write("Monday")
+        break
+      case '星期二':
+        document.write("Tuesday")
+        break
+      case '星期三':
+        document.write("Wednesday")
+        break
+      case '星期四':
+        document.write("Thursday")
+        break
+      case '星期五':
+        document.write("Friday")
+        break
+      case '星期六':
+        document.write("Saturday")
+        break
+      case '星期日':
+        document.write("Sunday")
+        break
+      default:
+        document.write("输入错误")
+    }
+    document.write('<br>' + '=====================' + '<br>')
+    let name = prompt("请输入一个名字")
+    let pwd = prompt("请输入一个密码")
+    while (true) {
+      if (name === "admin" && pwd === "123456") {
+        alert("登录成功")
+        break
+      }
+      else {
+        alert("登录失败")
+        name = prompt("请输入一个名字")
+        pwd = prompt("请输入一个密码")
+      }
+    }
+  </script>
+</body>
+
+</html>

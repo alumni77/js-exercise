@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function time(seconds = 0) {
+      let hour = seconds / 3600
+      let minute = (seconds % 3600) / 60
+      let second = (seconds % 3600) % 60
+      return [hour, minute, second]
+    }
+    let seconds = Number(prompt('请输入秒数'))
+    let arr = time(seconds)
+    document.write(`${seconds}转换为${parseInt(arr[0])}小时${parseInt(arr[1])}分钟${parseInt(arr[2])}秒`)
+
+  </script>
+</body>
+
+</html>
